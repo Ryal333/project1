@@ -1,8 +1,8 @@
 import { useState } from "preact/hooks";
-import PageBody from "../../../../../../shared/components/PageBody/PageBody";
-import PageHeader from "../../../../../../shared/components/PageHeader/PageHeader";
-import Tabs from "../../../../../../shared/components/Tabs/Tabs";
-import Input from "../../../../../../shared/components/Input/Input";
+import PageBody from "../../../../../shared/components/PageBody/PageBody";
+import PageHeader from "../../../../../shared/components/PageHeader/PageHeader";
+import Tabs from "../../../../../shared/components/Tabs/Tabs";
+import Input from "../../../../../shared/components/Input/Input";
 
 class applicantData  {
   loanCode : string = '';
