@@ -24,7 +24,7 @@
     border-radius: 0 0 15px 15px;
     border: 0;
     background-color: #ffffff;
-    box-shadow: 0 0 11px #848484;
+    box-shadow: 0 0 11px #84848452;
     color: var(--primary-clr-1);     
     font-weight: 600;
     font-size: 15px;
@@ -36,6 +36,6 @@
     background-color: var(--primary-clr-2);
     color: #ffffff;
     font-size: 18px;
-    box-shadow: 0 0 16px #6a6a6a;
+    box-shadow: 0 0 14px #0000007d;
     transform: scale(1.1);
 }

@@ -12,8 +12,9 @@ export function App() {
 		<LocationProvider>
 			<Navbar></Navbar>
 			<Router>
-				<Route path="/entries/PreSanctionLoanProcess/HousingLoanApplication" component={HousingLoanApplication} />
-				<Route default component={NotFound} />
+				<Route default path="/entries/PreSanctionLoanProcess/HousingLoanApplication" component={HousingLoanApplication} />
+				<Route default path="/" component={HousingLoanApplication} />
+				<Route component={NotFound} />
 			</Router>
 		</LocationProvider>
 	);

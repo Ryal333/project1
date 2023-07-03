@@ -22,7 +22,8 @@ export const HousingLoanApplication = () => {
   
  return (
   <>
-   <PageHeader heading={'Housing Loan Application'}>hii</PageHeader>
+   <PageHeader heading={'Housing Loan Application'}>
+   </PageHeader>
   {
     currentSection === "Applicant" ? <Applicant/> : 
     currentSection === "Loan" ? <Loan/> :

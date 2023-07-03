@@ -6,7 +6,7 @@
 }
 
 .field_main_container label,
-.field_main_container input{
+.field_main_container textarea{
     display: block;
 }
 
@@ -16,17 +16,17 @@
     font-size: 16px;
 }
 
-.field_main_container input{
+.field_main_container textarea{
     padding: 10px;
     border-radius: 6px;
     border: 2px solid var(--primary-clr-3);
     width: 100%;
     color: var(--primary-clr-1);
     transition: all.2s ease-in-out;
-    font-size: 18px;
+    min-height: 100px;
 }
 
-.field_main_container input:focus{
+.field_main_container textarea:focus{
     border-color:var(--primary-clr-2);
 }
 
@@ -35,11 +35,11 @@
     color: red;
 }
 
-.field_main_container input:hover{
+.field_main_container input:invalid{
     border-color: rgb(251, 170, 170);
     background-color: rgb(255, 237, 237);
 }
 
-.field_main_container input:hover ~ .error_text{
+.field_main_container input:invalid ~ .error_text{
     visibility: visible;
 }

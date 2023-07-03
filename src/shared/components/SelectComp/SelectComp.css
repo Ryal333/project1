@@ -17,11 +17,11 @@
     border-color:var(--primary-clr-2);
 }
 
-.field_main_container select:hover{
+.field_main_container select:invalid{
     border-color: rgb(251, 170, 170);
     background-color: rgb(255, 237, 237);
 }
 
-.field_main_container select:hover ~ .error_text{
+.field_main_container select:invalid ~ .error_text{
     visibility: visible;
 }

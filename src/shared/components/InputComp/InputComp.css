@@ -1,0 +1,51 @@
+@import '../../Styles/Constants.css';
+
+
+.field_main_container{
+    padding: 10px 20px 0 20px;
+}
+
+.field_main_container label,
+.field_main_container input{
+    display: block;
+}
+
+.field_main_container label{
+    margin-bottom: 6px ;
+    color: var(--primary-clr-1);
+    font-size: 16px;
+}
+
+.field_main_container input{
+    padding: 10px;
+    border-radius: 6px;
+    border: 2px solid var(--primary-clr-3);
+    width: 100%;
+    color: var(--primary-clr-1);
+    transition: all .2s ease-in-out;
+    font-size: 18px;
+}
+
+.field_main_container input:focus{
+    border-color:var(--primary-clr-2);
+}
+
+.error_text{
+    visibility: hidden;
+    color: red;
+}
+
+.field_main_container input:invalid{
+    border-color: rgb(251, 170, 170);
+    background-color: rgb(255, 237, 237);
+}
+
+.field_main_container input:invalid ~ .error_text{
+    visibility: visible;
+}
+
+@media screen and (max-width: 767px){
+    .field_main_container label{
+        font-size: 14px;
+    }
+}
