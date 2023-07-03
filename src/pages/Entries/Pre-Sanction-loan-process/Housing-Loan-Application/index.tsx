@@ -1,12 +1,12 @@
 import {useState, useEffect} from "preact/hooks"
 import { Applicant } from "./components/Applicant";
 import { Loan } from "./components/Loan";
-import { SourceDetails } from "./components/Source-details";
+import { SourceDetails } from "./components/SourceDetails";
 import { Property } from "./components/Property";
-import { BuilderDetails } from "./components/Builder-details";
-import { PropertyDetails } from "./components/Property_details";
-import { PropertyOtherDetails } from "./components/Property-other-details";
-import { GeneralInfo } from "./components/General-info";
+import { BuilderDetails } from "./components/BuilderDetails";
+import { PropertyDetails } from "./components/PropertyDetails";
+import { PropertyOtherDetails } from "./components/PropertyOtherDetails";
+import { GeneralInfo } from "./components/GeneralInfo";
 import { Guarantor } from "./components/Guarantor";
 import Tabs from "../../../../shared/components/Tabs/Tabs";
 import PageHeader from "../../../../shared/components/PageHeader/PageHeader";
