@@ -1,4 +1,8 @@
 import { useState } from "preact/hooks";
+import PageBody from "../../../../../../shared/components/PageBody/PageBody";
+import PageHeader from "../../../../../../shared/components/PageHeader/PageHeader";
+import Tabs from "../../../../../../shared/components/Tabs/Tabs";
+import Input from "../../../../../../shared/components/Input/Input";
 
 type applicantData = {
   loanCode : string;
@@ -67,6 +71,12 @@ export const Applicant = () => {
   }
 
   return (
-    <div>Applicant</div>
+    <>
+      <PageBody>
+        <div className="dg col4">
+          <Input/>
+        </div>
+      </PageBody>
+    </>
   )
 }

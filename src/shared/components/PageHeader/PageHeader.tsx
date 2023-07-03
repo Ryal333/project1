@@ -1,15 +1,15 @@
 import Heading from '../Heading/Heading';
-import './FormHeader.css';
+import './PageHeader.css';
 
-const FormHeader = () => {
+const PageHeader = ({children , heading}) => {
   return (
     <section class="formHeader_main_container">
-        <Heading/>
+        <Heading heading={heading}/>
         <div class="formHeader_sub_container">
-            hiii
+            {children}
         </div>
     </section>
   )
 }
 
-export default FormHeader
+export default PageHeader;

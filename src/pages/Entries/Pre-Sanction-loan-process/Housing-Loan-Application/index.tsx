@@ -8,6 +8,8 @@ import { PropertyDetails } from "./components/Property_details";
 import { PropertyOtherDetails } from "./components/Property-other-details";
 import { GeneralInfo } from "./components/General-info";
 import { Guarantor } from "./components/Guarantor";
+import Tabs from "../../../../shared/components/Tabs/Tabs";
+import PageHeader from "../../../../shared/components/PageHeader/PageHeader";
 export const HousingLoanApplication = () => {
     
   const sections : string[] = ["Applicant","Loan","Source Details","Property","Builder Dlts","Property Dlts","Property Other Dlts","General Info.","Gurantor"];
@@ -20,6 +22,7 @@ export const HousingLoanApplication = () => {
   
  return (
   <>
+   <PageHeader heading={'Housing Loan Application'}>hii</PageHeader>
   {
     currentSection === "Applicant" ? <Applicant/> : 
     currentSection === "Loan" ? <Loan/> :
@@ -31,11 +34,7 @@ export const HousingLoanApplication = () => {
     currentSection === "General Info." ? <GeneralInfo/> :
     currentSection === "Gurantor" ? <Guarantor/> : "" 
   }
-  {
-   sections.map((section) =>{
-    return <button onClick={()=>{setCurrentSection(section)}}>{section}</button>
-   }) 
-  }
+  <Tabs tabsArray={sections} onTabSelect={setCurrentSection} currentTab={currentSection} />
   </>
  )
 

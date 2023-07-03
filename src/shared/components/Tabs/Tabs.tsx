@@ -1,21 +1,21 @@
 import './Tabs.css';
 
-const SingleTab = () =>{
+const SingleTab = ({tabName , onTabSelect , currentTab}) =>{
     return(
         <div class="tabs_sub_container">
-            <button>
-                button
+            <button class={`${currentTab === tabName ? 'selected' : ''}`} onClick={()=>onTabSelect(tabName)}>
+                {tabName}
             </button>
         </div>
     );
 }
 
-const Tabs = () => {
+const Tabs = ({ tabsArray, onTabSelect , currentTab}) => {
   return (
     <section class="tabs_container">
-        <SingleTab/>
-        <SingleTab/>
-        <SingleTab/>
+      {tabsArray.map((tabName, index) => (
+        <SingleTab key={index} tabName={tabName} onTabSelect={onTabSelect} currentTab={currentTab}/>
+      ))}
     </section>
   )
 }

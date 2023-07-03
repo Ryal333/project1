@@ -9,6 +9,7 @@
 
 body{
     background-color: var(--primary-clr-5);
+    height: 4000px;
 }
 
 .df{
@@ -46,6 +47,10 @@ input , select {
 
 .col3{
     grid-template-columns: 1fr 1fr 1fr;
+}
+
+.col4{
+    grid-template-columns: auto auto auto auto;
 }
 
 @media screen and (max-width: 767px){

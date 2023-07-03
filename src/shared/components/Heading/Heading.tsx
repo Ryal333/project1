@@ -1,11 +1,11 @@
 import './Heading.css';
 
-const Heading = () => {
+const Heading = ({heading}) => {
   return (
     <section class="heading_container">
         <div class="heading_sub_container">
             <div class="df aic h_100 heading_sub_container2">
-                <h1>Housing Loan Application Entry</h1>
+                <h1>{heading}</h1>
             </div>
         </div>
     </section>

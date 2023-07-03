@@ -31,7 +31,8 @@
     border-top: 3px solid var(--primary-clr-2);
 }
 
-.tabs_container .tabs_sub_container button:hover{
+.tabs_container .tabs_sub_container button.selected,
+    .tabs_container .tabs_sub_container button:hover{
     background-color: var(--primary-clr-2);
     color: #ffffff;
     font-size: 18px;

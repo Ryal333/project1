@@ -1,9 +1,9 @@
 import './PageBody.css';
 
-const PageBody = () => {
+const PageBody = ({children}) => {
   return (
     <section class="PageBody_main_section">
-        <div>ghi</div>
+        {children}
     </section>
   )
 }
