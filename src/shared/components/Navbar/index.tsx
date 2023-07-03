@@ -2,6 +2,15 @@ import "./navbar.css"
 
 export const Navbar = () => {
   return (
-    <div class='navbar_container'><h1>NAVBAR</h1></div>
+    <nav class='main_nav'>
+        <ul>
+            <li><a href="">list</a></li>
+            <li><a href="">list</a></li>
+            <li><a href="">list</a></li>
+            <li><a href="">list</a></li>
+            <li><a href="">list</a></li>
+            <li><a href="">list</a></li>
+        </ul>
+    </nav>
   )
 }

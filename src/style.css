@@ -1,5 +1,64 @@
+@import './shared/Styles/Constants.css';
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Helvetica;
+}
+
+body{
+    background-color: var(--primary-clr-5);
+}
+
+.df{
+    display: flex;
+}
+
+.aic{
+    align-items: center;
+}
+
+.jcc{
+    justify-content: center;
+}
+
+.h_100{
+    height: 100%;
+}
+
+label{
+    font-size: 19px;
+}
+
+input , select {
+    font-size: 22px;
+    outline: none;
+}
+
+.dg{
+    display: grid;
+}
+
+.col2{
+    grid-template-columns: 1fr 1fr;
+}
+
+.col3{
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+@media screen and (max-width: 767px){
+    .col3{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.cs2{
+    grid-column: span 2;
+}
+
+fieldset{
+    border-color: #5288b55e;
+    border-radius: 10px;
 }

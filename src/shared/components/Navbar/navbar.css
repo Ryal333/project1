@@ -1,5 +1,27 @@
-.navbar_container{
-    background-color: blueviolet;
-    color: black;
-    padding: 20px;
+nav.main_nav{
+    position: sticky;
+    top: 0;
+    height: 80px;
+    background-color: var(--primary-clr-1);
+    border-radius: 0 0 15px 15px;
+    box-shadow: 0px 5px 10px #0000007f;
+    display : flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+nav.main_nav ul{
+    list-style:none;
+
+}
+
+nav.main_nav ul li{
+    display: inline;
+    margin: 0 25px;
+}
+
+nav.main_nav ul li a{
+    font-size: 22px;
+    color:#ffffff;
+    text-decoration: none;
 }
