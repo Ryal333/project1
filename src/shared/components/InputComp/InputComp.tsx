@@ -19,6 +19,7 @@ const Input = (props: {
     maxLength?: number;
     minLength?: number;
     required?: boolean;
+    format?: string;
 }) => {
     if (!props.formValuesController && !props.setStateFunc) {
         console.warn(
@@ -44,16 +45,24 @@ const Input = (props: {
                 {props.label}
                 {props.required ? '*' : ''}
             </label>
-            <input
-                value={props.value}
-                name={props.name}
-                pattern={props.regex}
-                type={props.type ? props.type : 'text'}
-                maxLength={props.maxLength}
-                minLength={props.minLength}
-                required={props.required ? props.required : false}
-                onInput={handleInputChange}
-            />
+            <div class="input_wrapper">
+                {props.format === 'interest' && (
+                    <span class="helper_text_right">%</span>
+                )}
+                {props.format === 'amount' && (
+                    <span class="helper_text_left">INR</span>
+                )}
+                <input
+                    value={props.value}
+                    name={props.name}
+                    pattern={props.regex}
+                    type={props.type ? props.type : 'text'}
+                    maxLength={props.maxLength}
+                    minLength={props.minLength}
+                    required={props.required ? props.required : false}
+                    onInput={handleInputChange}
+                />
+            </div>
             <small class="error_text">this is error</small>
         </div>
     );

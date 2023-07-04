@@ -1,0 +1,51 @@
+@import "../../Styles/Constants.css";
+
+.amount_main_container {
+  padding: 10px 20px 0 20px;
+}
+
+.amount_main_container label,
+.amount_main_container input {
+  display: block;
+}
+
+.amount_main_container label {
+  margin-bottom: 6px;
+  color: var(--primary-clr-1);
+  font-size: 16px;
+}
+
+.amount_main_container input {
+  padding: 10px;
+  border-radius: 6px;
+  border: 2px solid var(--primary-clr-3);
+  width: 50%;
+  color: var(--primary-clr-1);
+  transition: all 0.2s ease-in-out;
+  font-size: 18px;
+  outline: 3px solid #ffffff00;
+}
+
+.amount_main_container input:focus {
+  outline-color: var(--primary-clr-4);
+}
+
+.error_text {
+  visibility: hidden;
+  color: red;
+}
+
+.amount_main_container input:invalid {
+  border-color: rgb(251, 170, 170);
+  background-color: rgb(255, 237, 237);
+}
+
+.amount_main_container input:invalid ~ .error_text {
+  visibility: visible;
+}
+
+@media screen and (max-width: 767px) {
+  .amount_main_container label {
+    font-size: 14px;
+  }
+}
