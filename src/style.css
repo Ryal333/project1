@@ -84,7 +84,7 @@ textarea {
     grid-column: span 4;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1000px) {
 
     .col3 {
         grid-template-columns: 1fr 1fr;
@@ -100,6 +100,30 @@ textarea {
 
     .cs3 {
         grid-column: span 2;
+    }
+
+}
+
+@media screen and (max-width: 700px) {
+
+    .col3 {
+        grid-template-columns: auto;
+    }
+
+    .col4 {
+        grid-template-columns: auto;
+    }
+
+    .cs4 {
+        grid-column: auto;
+    }
+
+    .cs3 {
+        grid-column: auto;
+    }
+
+    .cs2 {
+        grid-column: auto;
     }
 
 }
@@ -121,4 +145,42 @@ hr {
     border-color: var(--primary-clr-4);
     border-width: 2px;
     margin: 30px 20px;
+}
+
+/* Table - BEGIN */
+
+.tbl {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 2px solid var(--primary-clr-4);
+}
+
+.tbl th {
+    background-color: var(--primary-clr-4);
+}
+
+.tbl th,
+.tbl td {
+    text-align: left;
+    padding: 8px;
+    border: 2px solid var(--primary-clr-4);
+}
+
+.tbl tr:hover {
+    background-color: var(--primary-clr-5);
+}
+
+.tbl.striped tr:nth-child(even) {
+    background-color: var(--primary-clr-5)
+}
+
+/* Table - END */
+
+.overFlow_x_hidden {
+    overflow-x: hidden;
+}
+
+.overFlow_x_auto {
+    overflow-x: auto;
 }
