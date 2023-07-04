@@ -57,7 +57,7 @@ const Input = (props: {
           type={props.type ? props.type : "text"}
           maxLength={props.maxLength}
           minLength={props.minLength}
-          required={props.required ? props.required : true}
+          required={props.required ? props.required : false}
           onInput={handleInputChange}
         />
       </div>
