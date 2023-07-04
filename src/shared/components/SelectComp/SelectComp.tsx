@@ -1,19 +1,32 @@
 import './SelectComp.css';
-type obj = {
+export type optionsObjType = {
     value: string;
 };
 const SelectComp = (props: {
-    formValuesController;
+    formValuesController?: (value: string, name: string) => any;
+    setStateFunc?: (value: string) => any;
     value: string;
     name: string;
-    optionData: Array<obj>;
+    optionData: Array<optionsObjType>;
     label?: string;
     required?: boolean;
 }) => {
+    if (!props.formValuesController && !props.setStateFunc) {
+        console.warn(
+            'At least one of formValuesController or setStateFunc must be provided.'
+        );
+    }
+
     const handleInputChange = (event: Event) => {
-        const input = event.target as HTMLInputElement;
-        const { name, value } = input;
-        props.formValuesController(value, name);
+        if (props.setStateFunc && !props.formValuesController) {
+            const input = event.target as HTMLInputElement;
+            const { value } = input;
+            props.setStateFunc(value);
+        } else {
+            const input = event.target as HTMLInputElement;
+            const { name, value } = input;
+            props.formValuesController(value, name);
+        }
     };
     return (
         <div class="field_main_container">

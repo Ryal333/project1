@@ -5,6 +5,7 @@ import Tabs from '../../../../../shared/components/Tabs/Tabs';
 import InputComp from '../../../../../shared/components/InputComp/InputComp';
 import SelectComp from '../../../../../shared/components/SelectComp/SelectComp';
 import TextAreaComp from '../../../../../shared/components/TextAreaComp/TextAreaComp';
+import SubmitButtonSet from '../../../../../shared/components/SubmitButtonSet/SubmitButtonSet';
 
 class applicantData {
     loanCode: string = '';
@@ -24,7 +25,7 @@ class applicantData {
     applicantsSl: string = '';
     indivNo: string = '';
     JCApplicantAddress: string = '';
-    JCApplicant : string = '';
+    JCApplicant: string = '';
     JCEmployerBusinessName: string = '';
     relationshipWithApplicant: string = '';
     JCPhotographAttached: string = '';
@@ -35,8 +36,10 @@ class applicantData {
 
 export const Applicant = () => {
     const [formError, setFormError] = useState<boolean>(false);
-    const [formData, setFormData] = useState<applicantData>(new applicantData());
-    const dummyoptionArray = [{value:''} , {value : 'o1'}]
+    const [formData, setFormData] = useState<applicantData>(
+        new applicantData()
+    );
+    const dummyoptionArray = [{ value: '' }, { value: 'o1' }];
     const formValuesController = (inputVal: string, name: string) => {
         setFormData((prevState) => ({
             ...prevState,
@@ -49,19 +52,17 @@ export const Applicant = () => {
     };
 
     useEffect(() => {
-      console.log(formData);
-      for( const k in formData){
-        console.log(formData[k]);
-        
-      }
-    }, [formData])
-    
+        console.log(formData);
+        for (const k in formData) {
+            console.log(formData[k]);
+        }
+    }, [formData]);
 
     return (
         <>
             <PageBody>
-                <form action="" >
-                  <fieldset className="fieldWrapper dg col4" >
+                <form action="">
+                    <fieldset className="fieldWrapper dg col4">
                         <InputComp
                             formValuesController={formValuesController}
                             name="loanCode"
@@ -78,28 +79,28 @@ export const Applicant = () => {
                         <SelectComp
                             name="projectType"
                             value={formData.projectType}
-                            label='Project Type'
+                            label="Project Type"
                             optionData={dummyoptionArray}
                             formValuesController={formValuesController}
                         />
                         <SelectComp
                             name="propertyType"
                             value={formData.propertyType}
-                            label='Property Type'
+                            label="Property Type"
                             optionData={dummyoptionArray}
                             formValuesController={formValuesController}
                         />
                         <SelectComp
                             name="locationOfProperty"
                             value={formData.locationOfProperty}
-                            label='Location of Property'
+                            label="Location of Property"
                             optionData={dummyoptionArray}
                             formValuesController={formValuesController}
                         />
                         <SelectComp
                             name="repaymentFrequency"
                             value={formData.repaymentFrequency}
-                            label='Repayment frequency'
+                            label="Repayment frequency"
                             optionData={dummyoptionArray}
                             formValuesController={formValuesController}
                         />
@@ -115,126 +116,129 @@ export const Applicant = () => {
                             value={formData.applicationIndividualNumber}
                             label="Applicant Individual No"
                         />
-                        <div class='cs4'>
-                          <TextAreaComp
-                              formValuesController={formValuesController}
-                              name="address"
-                              value={formData.address}
-                              label="Address"
-                          />
+                        <div class="cs4">
+                            <TextAreaComp
+                                formValuesController={formValuesController}
+                                name="address"
+                                value={formData.address}
+                                label="Address"
+                            />
                         </div>
-                        <div class='cs2'>
-                          <InputComp
-                              formValuesController={formValuesController}
-                              name="employerBusinessName"
-                              value={formData.employerBusinessName}
-                              label="Employee / Business name"
-                          />
+                        <div class="cs2">
+                            <InputComp
+                                formValuesController={formValuesController}
+                                name="employerBusinessName"
+                                value={formData.employerBusinessName}
+                                label="Employee / Business name"
+                            />
                         </div>
                         <SelectComp
                             name="photographAttached"
                             value={formData.photographAttached}
-                            label='Photograph Attached'
+                            label="Photograph Attached"
                             optionData={dummyoptionArray}
                             formValuesController={formValuesController}
                         />
                         <SelectComp
                             name="proofOfAgeAttached"
                             value={formData.proofOfAgeAttached}
-                            label='Proof of age Attached'
+                            label="Proof of age Attached"
                             optionData={dummyoptionArray}
                             formValuesController={formValuesController}
                         />
                         <SelectComp
                             name="proofOfResidenceAttached"
                             value={formData.proofOfResidenceAttached}
-                            label='Proof of residence Attached'
+                            label="Proof of residence Attached"
                             optionData={dummyoptionArray}
                             formValuesController={formValuesController}
                         />
 
-                        <hr class='cs4' />
+                        <hr class="cs4" />
 
                         <InputComp
-                              formValuesController={formValuesController}
-                              name="noOfJointCoApplicant"
-                              value={formData.noOfJointCoApplicant}
-                              label="No. of joint and Co Applicants"
-                              type='number'
-                          />
+                            formValuesController={formValuesController}
+                            name="noOfJointCoApplicant"
+                            value={formData.noOfJointCoApplicant}
+                            label="No. of joint and Co Applicants"
+                            type="number"
+                        />
 
                         <InputComp
-                              formValuesController={formValuesController}
-                              name="applicantsSl"
-                              value={formData.applicantsSl}
-                              label="Applicant's SI."
-                          />
-                          <InputComp
-                              formValuesController={formValuesController}
-                              name="indivNo"
-                              value={formData.indivNo}
-                              label="Indiv No."
-                          />
-                          <div class='cs4'>
-                          <TextAreaComp
-                              formValuesController={formValuesController}
-                              name="JCApplicantAddress"
-                              value={formData.JCApplicantAddress}
-                              label="Address"
-                          />
+                            formValuesController={formValuesController}
+                            name="applicantsSl"
+                            value={formData.applicantsSl}
+                            label="Applicant's SI."
+                        />
+                        <InputComp
+                            formValuesController={formValuesController}
+                            name="indivNo"
+                            value={formData.indivNo}
+                            label="Indiv No."
+                        />
+                        <div class="cs4">
+                            <TextAreaComp
+                                formValuesController={formValuesController}
+                                name="JCApplicantAddress"
+                                value={formData.JCApplicantAddress}
+                                label="Address"
+                            />
                         </div>
                         <SelectComp
                             name="JCApplicant"
                             value={formData.JCApplicant}
-                            label='Joint / Co Applicant'
+                            label="Joint / Co Applicant"
                             optionData={dummyoptionArray}
                             formValuesController={formValuesController}
                         />
                         <div className="cs2">
-                          <InputComp
-                              formValuesController={formValuesController}
-                              name="JCEmployerBusinessName"
-                              value={formData.JCEmployerBusinessName}
-                              label="Employee / Business Name"
-                          />
+                            <InputComp
+                                formValuesController={formValuesController}
+                                name="JCEmployerBusinessName"
+                                value={formData.JCEmployerBusinessName}
+                                label="Employee / Business Name"
+                            />
                         </div>
                         <div className="cs2">
-                        <InputComp
-                              formValuesController={formValuesController}
-                              name="relationshipWithApplicant"
-                              value={formData.relationshipWithApplicant}
-                              label="Relationship with Applicant"
-                          />
+                            <InputComp
+                                formValuesController={formValuesController}
+                                name="relationshipWithApplicant"
+                                value={formData.relationshipWithApplicant}
+                                label="Relationship with Applicant"
+                            />
                         </div>
                         <SelectComp
                             name="JCPhotographAttached"
                             value={formData.JCPhotographAttached}
-                            label='Photograph Attached'
+                            label="Photograph Attached"
                             optionData={dummyoptionArray}
                             formValuesController={formValuesController}
                         />
                         <SelectComp
                             name="JCProofOfAgeAttached"
                             value={formData.JCProofOfAgeAttached}
-                            label='Proof of age Attached'
+                            label="Proof of age Attached"
                             optionData={dummyoptionArray}
                             formValuesController={formValuesController}
                         />
                         <SelectComp
                             name="JCProofOfResidenceAttached"
                             value={formData.JCProofOfResidenceAttached}
-                            label='Proof of residence Attached'
+                            label="Proof of residence Attached"
                             optionData={dummyoptionArray}
                             formValuesController={formValuesController}
                         />
                         <SelectComp
                             name="includeInIncomeCalc"
                             value={formData.includeInIncomeCalc}
-                            label='Include in income calculation'
+                            label="Include in income calculation"
                             optionData={dummyoptionArray}
                             formValuesController={formValuesController}
                         />
                     </fieldset>
+                    <div className="cs4">
+                        <SubmitButtonSet option={'Add'} />
+                    </div>
                 </form>
             </PageBody>
         </>

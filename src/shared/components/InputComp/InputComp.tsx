@@ -1,7 +1,8 @@
 import './InputComp.css';
 
 const Input = (props: {
-    formValuesController;
+    formValuesController?;
+    setStateFunc?;
     label?: string;
     value: string;
     name: string;
@@ -19,10 +20,22 @@ const Input = (props: {
     minLength?: number;
     required?: boolean;
 }) => {
+    if (!props.formValuesController && !props.setStateFunc) {
+        console.warn(
+            'At least one of formValuesController or setStateFunc must be provided.'
+        );
+    }
+
     const handleInputChange = (event: Event) => {
-        const input = event.target as HTMLInputElement;
-        const { name, value } = input;
-        props.formValuesController(value, name);
+        if (props.setStateFunc && !props.formValuesController) {
+            const input = event.target as HTMLInputElement;
+            const { value } = input;
+            props.setStateFunc(value);
+        } else {
+            const input = event.target as HTMLInputElement;
+            const { name, value } = input;
+            props.formValuesController(value, name);
+        }
     };
 
     return (
