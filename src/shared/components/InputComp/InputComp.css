@@ -1,52 +1,73 @@
-@import '../../Styles/Constants.css';
+@import "../../Styles/Constants.css";
 
-
-.field_main_container{
-    padding: 10px 20px 0 20px;
+.field_main_container {
+  padding: 10px 20px 0 20px;
 }
 
 .field_main_container label,
-.field_main_container input{
-    display: block;
+.field_main_container .input_wrapper input {
+  display: block;
 }
 
-.field_main_container label{
-    margin-bottom: 6px ;
-    color: var(--primary-clr-1);
-    font-size: 16px;
+.field_main_container label {
+  margin-bottom: 6px;
+  color: var(--primary-clr-1);
+  font-size: 16px;
 }
 
-.field_main_container input{
-    padding: 10px;
-    border-radius: 6px;
-    border: 2px solid var(--primary-clr-3);
-    width: 100%;
-    color: var(--primary-clr-1);
-    transition: all .2s ease-in-out;
-    font-size: 18px;
-    outline: 3px solid #ffffff00;
+.field_main_container .input_wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
 }
 
-.field_main_container input:focus{
-    outline-color:var(--primary-clr-4);
+.field_main_container .input_wrapper input {
+  padding: 10px;
+  border-radius: 6px;
+  border: 2px solid var(--primary-clr-3);
+  width: 100%;
+  color: var(--primary-clr-1);
+  transition: all 0.2s ease-in-out;
+  font-size: 18px;
+  outline: 3px solid #ffffff00;
 }
 
-.error_text{
-    visibility: hidden;
-    color: red;
+.field_main_container .input_wrapper input:focus {
+  outline-color: var(--primary-clr-4);
 }
 
-.field_main_container input:invalid{
-    border-color: rgb(251, 170, 170);
-    background-color: rgb(255, 237, 237);
+.error_text {
+  visibility: hidden;
+  color: red;
 }
 
-.field_main_container input:invalid ~ .error_text{
-    visibility: visible;
+.field_main_container .input_wrapper input:invalid {
+  border-color: rgb(251, 170, 170);
+  background-color: rgb(255, 237, 237);
 }
 
-@media screen and (max-width: 767px){
-    .field_main_container label{
-        font-size: 14px;
-    }
+.field_main_container .input_wrapper input:invalid ~ .error_text {
+  visibility: visible;
+}
+
+.field_main_container .input_wrapper .helper_text_right {
+  position: absolute;
+  right: 5%;
+  font-size: 18px;
+}
+
+.field_main_container .input_wrapper .helper_text_left {
+  position: absolute;
+  left: 2%;
+  font-size: 18px;
+}
+
+.field_main_container .input_wrapper .helper_text_left + input {
+  padding-left: 10%;
+}
+
+@media screen and (max-width: 767px) {
+  .field_main_container label {
+    font-size: 14px;
+  }
 }
