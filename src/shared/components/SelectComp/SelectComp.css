@@ -11,10 +11,11 @@
     color: var(--primary-clr-1);
     transition: all.2s ease-in-out;
     font-size: 18px;
+    outline: 3px solid #ffffff00;
 }
 
 .field_main_container select:focus{
-    border-color:var(--primary-clr-2);
+    outline-color:var(--primary-clr-4);
 }
 
 .field_main_container select:invalid{
