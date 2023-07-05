@@ -1,11 +1,11 @@
 .formHeader_main_container {
-    margin: 20px;
     background-color: var(--primary-clr-4);
     border: 2px solid var(--primary-clr-2);
     /* box-shadow: 0px 5px 8px #00000023; */
     border-radius: 5px;
-    padding-top: 100px;
+    margin: 20px;
     margin-top: -100px;
+    padding-top: 100px;
 }
 
 .formHeader_sub_container {

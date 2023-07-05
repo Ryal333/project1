@@ -19,12 +19,11 @@ const TextAreaComp = (props: {
     minLength?: number;
     required?: boolean;
 }) => {
-
     const handleInputChange = (event: Event) => {
         const input = event.target as HTMLTextAreaElement;
         const { name, value } = input;
-        props.formValuesController(value, name)
-      }
+        props.formValuesController(value, name);
+    };
 
     return (
         <div class="field_main_container">

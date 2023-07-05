@@ -3,14 +3,14 @@
 }
 
 .field_main_container select {
-    padding: 10px;
-    border-radius: 6px;
     border: 2px solid var(--primary-clr-3);
-    width: 100%;
+    border-radius: 6px;
     color: var(--primary-clr-1);
-    transition: all.2s ease-in-out;
     font-size: 16px;
     outline: 3px solid #ffffff00;
+    padding: 10px;
+    transition: all.2s ease-in-out;
+    width: 100%;
 }
 
 .field_main_container select:focus {
@@ -18,8 +18,8 @@
 }
 
 .field_main_container select:invalid {
-    border-color: rgb(251, 170, 170);
     background-color: rgb(255, 237, 237);
+    border-color: rgb(251, 170, 170);
 }
 
 .field_main_container select:invalid~.error_text {

@@ -1,10 +1,10 @@
-import { createContext } from "preact";
-import { optionsType } from "./provider";
+import { createContext } from 'preact';
+import { optionsType } from './provider';
 type optionType = {
-  option: optionsType;
-  setOption: (option: string) => void;
+    option: optionsType;
+    setOption: (option: string) => void;
 };
 export const OptionContext = createContext<optionType>({
-  option: "Add",
-  setOption: (option: string) => {},
+    option: 'Add',
+    setOption: (option: string) => {},
 });

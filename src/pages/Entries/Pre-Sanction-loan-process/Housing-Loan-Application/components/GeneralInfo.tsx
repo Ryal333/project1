@@ -1,5 +1,3 @@
 export const GeneralInfo = () => {
-    return (
-      <div>GeneralInfo</div>
-    )
-  }
+    return <div>GeneralInfo</div>;
+};

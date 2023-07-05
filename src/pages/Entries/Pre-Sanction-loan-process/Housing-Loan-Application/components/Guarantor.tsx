@@ -1,5 +1,3 @@
 export const Guarantor = () => {
-    return (
-      <div>Guarantor</div>
-    )
-  }
+    return <div>Guarantor</div>;
+};

@@ -1,5 +1,3 @@
 export const SourceDetails = () => {
-    return (
-      <div>SourceDetails</div>
-    )
-  }
+    return <div>SourceDetails</div>;
+};
