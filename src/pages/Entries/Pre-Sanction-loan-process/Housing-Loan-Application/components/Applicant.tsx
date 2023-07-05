@@ -49,6 +49,7 @@ export const Applicant = () => {
 
   const onSubmitHandler = (e) => {
     e.preventDefault();
+    alert("submitetd");
   };
 
   useEffect(() => {
