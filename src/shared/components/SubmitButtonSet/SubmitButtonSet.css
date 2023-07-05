@@ -2,6 +2,7 @@ button.exit {
     background-color: rgb(213, 95, 95);
     color: #ffffff;
     font-weight: 600;
+    border-color: rgb(215, 80, 80) !important;
 }
 
 button.save,

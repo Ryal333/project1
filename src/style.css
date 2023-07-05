@@ -21,11 +21,19 @@ body {
     border: 0;
     background-color: var(--primary-clr-4);
     cursor: pointer;
+    border-bottom: 3px solid var(--primary-clr-2);
 }
 
 .bttn:hover {
     transform: scale(1.05);
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.356);
+    border-bottom: 3px solid var(--primary-clr-2);
+}
+
+.bttn:active {
+    transform: translateY(3px);
+    border-bottom: 0px solid var(--primary-clr-2);
+    box-shadow: 0 0px 0px rgba(0, 0, 0, 0.356);
 }
 
 .df {

@@ -1,7 +1,7 @@
 @import "../../Styles/Constants.css";
 
 .field_main_container {
-  padding: 10px 20px 0 20px;
+  padding: 10px 15px 0 15px;
 }
 
 .field_main_container label,
@@ -12,7 +12,8 @@
 .field_main_container label {
   margin-bottom: 6px;
   color: var(--primary-clr-1);
-  font-size: 16px;
+  font-size: 14px;
+  font-weight: 600;
 }
 
 .field_main_container .input_wrapper {
@@ -28,7 +29,7 @@
   width: 100%;
   color: var(--primary-clr-1);
   transition: all 0.2s ease-in-out;
-  font-size: 18px;
+  font-size: 16px;
   outline: 3px solid #ffffff00;
 }
 
@@ -46,7 +47,7 @@
   background-color: rgb(255, 237, 237);
 }
 
-.field_main_container .input_wrapper input:invalid ~ .error_text {
+.field_main_container .input_wrapper input:invalid~.error_text {
   visibility: visible;
 }
 
@@ -62,7 +63,7 @@
   font-size: 18px;
 }
 
-.field_main_container .input_wrapper .helper_text_left + input {
+.field_main_container .input_wrapper .helper_text_left+input {
   padding-left: 10%;
 }
 

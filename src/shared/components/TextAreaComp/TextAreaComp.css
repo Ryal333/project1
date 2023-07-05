@@ -1,22 +1,11 @@
 @import '../../Styles/Constants.css';
 
 
-.field_main_container{
-    padding: 10px 20px 0 20px;
-}
-
-.field_main_container label,
-.field_main_container textarea{
+.field_main_container textarea {
     display: block;
 }
 
-.field_main_container label{
-    margin-bottom: 6px ;
-    color: var(--primary-clr-1);
-    font-size: 16px;
-}
-
-.field_main_container textarea{
+.field_main_container textarea {
     padding: 10px;
     border-radius: 6px;
     border: 2px solid var(--primary-clr-3);
@@ -25,22 +14,23 @@
     transition: all.2s ease-in-out;
     min-height: 100px;
     outline: 3px solid #ffffff00;
+    font-size: 16px;
 }
 
-.field_main_container textarea:focus{
-    outline-color:var(--primary-clr-4);
+.field_main_container textarea:focus {
+    outline-color: var(--primary-clr-4);
 }
 
-.error_text{
+.error_text {
     visibility: hidden;
     color: red;
 }
 
-.field_main_container input:invalid{
+.field_main_container input:invalid {
     border-color: rgb(251, 170, 170);
     background-color: rgb(255, 237, 237);
 }
 
-.field_main_container input:invalid ~ .error_text{
+.field_main_container input:invalid~.error_text {
     visibility: visible;
 }

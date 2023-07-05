@@ -1,4 +1,4 @@
-.tabs_container{
+.tabs_container {
     display: flex;
     /* width: 100%; */
     flex-wrap: wrap;
@@ -8,11 +8,11 @@
     border-radius: 5px 5px 0 0;
     border: 2px solid var(--primary-clr-2);
     margin: 20px 20px 0 20px;
-    padding: 20px;
+    padding: 15px;
     border-bottom: 0;
 }
 
-.tabs_container .tabs_sub_container{
+.tabs_container .tabs_sub_container {
     width: 25%;
     margin: 0 0px 10px 0px;
     display: flex;
@@ -21,7 +21,7 @@
     /* border-top: 3px solid #5288b5b8;*/
 }
 
-.tabs_container .tabs_sub_container button{
+.tabs_container .tabs_sub_container button {
     width: 95%;
     height: 50px;
     border-radius: 0 0 7px 7px;
@@ -35,10 +35,10 @@
 }
 
 .tabs_container .tabs_sub_container button.selected,
-    .tabs_container .tabs_sub_container button:hover{
+.tabs_container .tabs_sub_container button:hover {
     background-color: var(--primary-clr-2);
     color: #ffffff;
     font-size: 18px;
-    box-shadow: 0 0 14px #0000007d;
+    box-shadow: 0 0 6px #0000007d;
     /* transform: scale(1.1); */
 }
